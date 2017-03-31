@@ -15,12 +15,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
     model.cpp \
     control.cpp \
-    view.cpp
+    view.cpp \
+    king.cpp
 
 HEADERS  += \
     model.h \
     control.h \
-    view.h
+    view.h \
+    king.h
 
 FORMS    += \
     view.ui

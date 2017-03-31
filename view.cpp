@@ -2,6 +2,7 @@
 #include "control.h"
 #include "model.h"
 #include "ui_view.h"
+#include "king.h"
 
 
 
@@ -28,7 +29,7 @@ View::~View()
 
 void View::fond(){
     QBrush brush;
-    brush.setTextureImage(this->model->fond_menu());
+    brush.setTextureImage(this->model->fond());
     ui->mdi->setBackground(brush);
     this->setCentralWidget(ui->mdi);
 }
@@ -68,6 +69,17 @@ void View::menu(){
 
 void View::lancement(){
     ui->mdi->closeActiveSubWindow();
+
+    scene->addItem(king);
+
+
+
+    QBrush brush;
+    brush.setTextureImage(this->model->fond());
+    //view_jeu->setBackgroundBrush(brush);
+    view_jeu->setScene(scene_jeu);
+
+    this->setCentralWidget(view_jeu);
 }
 
 

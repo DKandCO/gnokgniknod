@@ -20,7 +20,8 @@ public:
 
 
 
-    QImage& fond_menu();
+    QImage& fond();
+    QPixmap& king();
     QPushButton& play();
 };
 

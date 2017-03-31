@@ -7,6 +7,7 @@
 #include <QHBoxLayout>
 #include "control.h"
 #include "model.h"
+#include "king.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QMdiArea>
@@ -14,6 +15,7 @@
 
 class Control;
 class Model;
+class King;
 
 namespace Ui {
 class View;
@@ -32,7 +34,7 @@ public:
     void setControl(Control *control) {
         this->control = control;
     }
-    void King();
+
 
     void fond();
     void menu();
@@ -40,13 +42,16 @@ public:
     QGraphicsView *view1 = new QGraphicsView();
     QGraphicsScene *scene = new QGraphicsScene();
 
+    QGraphicsView *view_jeu = new QGraphicsView();
+    QGraphicsScene *scene_jeu = new QGraphicsScene();
+
 
 
 private:
     Ui::View *ui;
     Control *control;
     Model *model;
-
+    King *king = new King();
 
     QPushButton *btn_play = new QPushButton("Play");
     QPushButton *btn_save = new QPushButton("Sauvegarder");
