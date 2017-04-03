@@ -23,6 +23,21 @@ public:
     QImage& fond();
     QPixmap& king();
     QPushButton& play();
+
+    bool haut1;
+    bool bas1;
+    bool droite1;
+    bool gauche1 ;
+
+    void haut();
+    void bas();
+    void droite();
+    void gauche();
+
+    bool get_haut();
+    bool get_bas();
+    bool get_droite();
+    bool get_gauche();
 };
 
 

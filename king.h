@@ -2,11 +2,13 @@
 #define KING_H
 
 #include "model.h"
+#include "banane.h"
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
+
 
 class Model;
 
@@ -19,8 +21,10 @@ public:
     void keyPressEvent(QKeyEvent * event);
 
 
+
 private:
     Model *model;
+
 
 signals:
 

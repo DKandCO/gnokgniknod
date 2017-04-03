@@ -16,13 +16,15 @@ SOURCES += main.cpp\
     model.cpp \
     control.cpp \
     view.cpp \
-    king.cpp
+    king.cpp \
+    banane.cpp
 
 HEADERS  += \
     model.h \
     control.h \
     view.h \
-    king.h
+    king.h \
+    banane.h
 
 FORMS    += \
     view.ui
