@@ -70,14 +70,22 @@ void View::menu(){
 void View::lancement(){
     ui->mdi->closeActiveSubWindow();
 
-    scene->addItem(king);
+    King *king = new King();
+
+
+
+    scene_jeu->addItem(king);
+
 
 
 
     QBrush brush;
     brush.setTextureImage(this->model->fond());
-    //view_jeu->setBackgroundBrush(brush);
+    view_jeu->setBackgroundBrush(brush);
     view_jeu->setScene(scene_jeu);
+
+    king->setFlag(QGraphicsItem::ItemIsFocusable);
+    king->setFocus();
 
     this->setCentralWidget(view_jeu);
 }

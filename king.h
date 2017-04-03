@@ -10,11 +10,13 @@
 
 class Model;
 
-class King : public QObject, public QGraphicsPixmapItem
+class King : public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
     King();
+
+    void keyPressEvent(QKeyEvent * event);
 
 
 private:

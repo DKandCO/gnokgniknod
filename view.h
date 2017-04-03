@@ -47,11 +47,13 @@ public:
 
 
 
+
+
 private:
     Ui::View *ui;
     Control *control;
     Model *model;
-    King *king = new King();
+
 
     QPushButton *btn_play = new QPushButton("Play");
     QPushButton *btn_save = new QPushButton("Sauvegarder");
