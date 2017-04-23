@@ -90,4 +90,24 @@ void View::lancement(){
     this->setCentralWidget(view_jeu);
 }
 
+void View::banane(){
+    Banane * banane = new Banane();
 
+    scene_jeu->addItem(banane);
+
+
+    if (this->model->get_haut() == true){
+        banane->setPos(x()+150,y()+50);
+
+    }
+    else if(this->model->get_bas() == true){
+        banane->setPos(x()+150,y()+150);
+    }
+    else if(this->model->get_gauche() == true){
+        banane->setPos(x()+100,y()+100);
+    }
+    else if(this->model->get_droite() == true){
+        banane->setPos(x()+200,y()+100);
+    }
+
+}

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/image_DK">
+        <file>Donkey_kong.png</file>
+        <file>banane.png</file>
+        <file>fond.png</file>
+    </qresource>
+</RCC>

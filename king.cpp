@@ -2,12 +2,13 @@
 #include <QKeyEvent>
 
 
-King::King() : QObject(), QGraphicsRectItem()
+King::King() : QObject(), QGraphicsPixmapItem()
 {
     //setPixmap(this->model->king());
-    setRect(100,100,100,100);
-    setBrush(* new QBrush(Qt::red));
-
+    //setRect(100,100,100,100);
+    //setBrush(* new QBrush(Qt::red));
+    setPixmap(QPixmap(":/image_DK/Donkey_kong"));
+    setScale(0.3);
 
 
 
@@ -36,23 +37,7 @@ void King::keyPressEvent(QKeyEvent *event){
 
     }
     else if (event->key() == Qt::Key_Space){
-        Banane * banane = new Banane();
-        if (this->model->get_haut() == true){
-            banane->setPos(x()+150,y()+50);
+        this->view->banane();
 
-        }
-        else if(this->model->get_bas() == true){
-            banane->setPos(x()+150,y()+150);
-        }
-        else if(this->model->get_gauche() == true){
-            banane->setPos(x()+100,y()+100);
-        }
-        else if(this->model->get_droite() == true){
-            banane->setPos(x()+200,y()+100);
-        }
-
-
-
-        scene()->addItem(banane);
     }
 }

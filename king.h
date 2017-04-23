@@ -3,16 +3,19 @@
 
 #include "model.h"
 #include "banane.h"
+#include "view.h"
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsItem>
+#include <QGraphicsPixmapItem>
 #include <QGraphicsRectItem>
 
 
 class Model;
+class View;
 
-class King : public QObject, public QGraphicsRectItem
+class King : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
 public:
@@ -24,6 +27,7 @@ public:
 
 private:
     Model *model;
+    View *view;
 
 
 signals:

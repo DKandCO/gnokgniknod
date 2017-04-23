@@ -13,7 +13,7 @@ Model::Model()
 QImage  &Model::fond()
 {
     QImage *image = new QImage();
-    image->load("/Users/joachimferrari/Don_king_kong/fond.png");
+    image->load(":/image_DK/fond.png");
     return *image;
 }
 
@@ -23,16 +23,6 @@ QPushButton &Model::play(){
 
 }
 
-QPixmap &Model::king(){
-    QImage *image = new QImage();
-
-    image->load("/Users/joachimferrari/Desktop/gnokgniknod/Bebe_DK.png");
-    QPixmap *pix = new QPixmap();
-    pix->fromImage(*image);
-
-
-    return *pix;
-}
 
 void Model::gauche(){
     haut1 = false;

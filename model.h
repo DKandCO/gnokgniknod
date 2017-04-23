@@ -21,13 +21,13 @@ public:
 
 
     QImage& fond();
-    QPixmap& king();
+
     QPushButton& play();
 
-    bool haut1;
-    bool bas1;
-    bool droite1;
-    bool gauche1 ;
+    bool haut1 = false;
+    bool bas1 = false;
+    bool droite1 = false;
+    bool gauche1 = false ;
 
     void haut();
     void bas();

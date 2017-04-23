@@ -28,3 +28,6 @@ HEADERS  += \
 
 FORMS    += \
     view.ui
+
+RESOURCES += \
+    ressource.qrc
