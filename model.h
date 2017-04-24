@@ -11,6 +11,7 @@
 #include <QGraphicsProxyWidget>
 #include <QPushButton>
 #include <QImage>
+#include <QSize>
 
 class Model
 {
@@ -21,6 +22,7 @@ public:
 
 
     QImage& fond();
+    QImage& fond_menu();
 
     QPushButton& play();
 

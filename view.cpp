@@ -4,6 +4,9 @@
 #include "ui_view.h"
 #include "king.h"
 
+#include <QDebug>
+
+
 
 
 
@@ -38,7 +41,7 @@ void View::menu(){
 
 
 
-    scene->setSceneRect(0, 0, 300, 500);
+    scene->setSceneRect(0, 0, 250, 450);
 
 
     QGraphicsProxyWidget *proxy = new QGraphicsProxyWidget();
@@ -63,7 +66,14 @@ void View::menu(){
 
 
 
-    ui->mdi->addSubWindow(view1);
+    QMdiSubWindow *menu = ui->mdi->addSubWindow(view1);
+    menu->setGeometry(250,100,300,500);
+
+    QBrush brush;
+    brush.setTextureImage(this->model->fond_menu());
+
+    view1->setBackgroundBrush(brush);
+
 
 }
 
@@ -94,7 +104,7 @@ void View::banane(){
     Banane * banane = new Banane();
 
     scene_jeu->addItem(banane);
-
+    qDebug() << " la scene : " << scene_jeu;
 
     if (this->model->get_haut() == true){
         banane->setPos(x()+150,y()+50);

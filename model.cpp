@@ -17,6 +17,15 @@ QImage  &Model::fond()
     return *image;
 }
 
+QImage  &Model::fond_menu()
+{
+    QImage *image = new QImage();
+    image->load(":/image_DK/fond_menu.png");
+
+
+    return *image;
+}
+
 QPushButton &Model::play(){
     QPushButton *btn_play = new QPushButton("Play");
     return *btn_play;

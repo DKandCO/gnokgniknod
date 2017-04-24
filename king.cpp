@@ -4,9 +4,7 @@
 
 King::King() : QObject(), QGraphicsPixmapItem()
 {
-    //setPixmap(this->model->king());
-    //setRect(100,100,100,100);
-    //setBrush(* new QBrush(Qt::red));
+
     setPixmap(QPixmap(":/image_DK/Donkey_kong"));
     setScale(0.3);
 

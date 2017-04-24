@@ -12,6 +12,7 @@
 #include <QGraphicsView>
 #include <QMdiArea>
 #include <QPushButton>
+#include <QMdiSubWindow>
 
 class Control;
 class Model;

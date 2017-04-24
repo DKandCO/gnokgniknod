@@ -13,9 +13,10 @@ class Model;
 class Banane : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
+
 public:
     Banane();
-    ~Banane();
+
     void bouge();
 
 public slots:

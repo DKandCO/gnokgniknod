@@ -1,17 +1,15 @@
 #include "banane.h"
+#include <QDebug>
 
 Banane::Banane() : QObject(), QGraphicsPixmapItem()
 {
 
     setPixmap((QPixmap(":/image_DK/banane.png")));
     setScale(0.2);
-    bouge();
-
+    //bouge();
+    qDebug()<<"le pb est la";
 }
 
-Banane::~Banane(){
-
-}
 
 void Banane::move_h(){
    setPos(x(),y()-10);
