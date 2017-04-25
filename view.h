@@ -39,7 +39,7 @@ public:
 
     void fond();
     void menu();
-    void banane();
+    //void banane();
 
     QGraphicsView *view1 = new QGraphicsView();
     QGraphicsScene *scene = new QGraphicsScene();

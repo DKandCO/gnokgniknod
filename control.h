@@ -21,6 +21,8 @@ public:
     void fond();
     void menu();
 
+    void banane_haut();
+
 
 
 

@@ -6,8 +6,8 @@ Banane::Banane() : QObject(), QGraphicsPixmapItem()
 
     setPixmap((QPixmap(":/image_DK/banane.png")));
     setScale(0.2);
-    //bouge();
-    qDebug()<<"le pb est la";
+    bouge();
+    qDebug() << "banane";
 }
 
 
@@ -52,6 +52,7 @@ void Banane::bouge(){
 
     QTimer * timer = new QTimer();
 
+    /*
     if(this->model->get_haut()==true){
         connect(timer,SIGNAL(timeout()),this,SLOT(move_h()));
     }
@@ -64,6 +65,8 @@ void Banane::bouge(){
     else if(this->model->get_gauche()==true){
         connect(timer,SIGNAL(timeout()),this,SLOT(move_g()));
     }
+    */
+    connect(timer,SIGNAL(timeout()),this,SLOT(move_h()));
 
 
     timer->start(50);

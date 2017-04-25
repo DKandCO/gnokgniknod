@@ -4,6 +4,7 @@
 #include "ui_view.h"
 #include "king.h"
 
+
 #include <QDebug>
 
 
@@ -17,6 +18,7 @@ View::View(QWidget *parent) :
     ui->setupUi(this);
     connect(btn_play, SIGNAL(clicked()), this, SLOT(lancement()));
     connect(btn_quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+
 
 
 
@@ -35,6 +37,7 @@ void View::fond(){
     brush.setTextureImage(this->model->fond());
     ui->mdi->setBackground(brush);
     this->setCentralWidget(ui->mdi);
+
 }
 
 void View::menu(){
@@ -78,33 +81,43 @@ void View::menu(){
 }
 
 void View::lancement(){
-    ui->mdi->closeActiveSubWindow();
-
+    //ui->mdi->closeActiveSubWindow();
+    view1->setDisabled(true);
     King *king = new King();
 
 
 
     scene_jeu->addItem(king);
 
-
-
-
     QBrush brush;
     brush.setTextureImage(this->model->fond());
     view_jeu->setBackgroundBrush(brush);
     view_jeu->setScene(scene_jeu);
+    this->setCentralWidget(view_jeu);
+
+
+
 
     king->setFlag(QGraphicsItem::ItemIsFocusable);
     king->setFocus();
 
-    this->setCentralWidget(view_jeu);
-}
 
-void View::banane(){
+
+}
+/*
+
+void View::banane(){ // le probleme vient de ce mmorceau de code, au moment d'ajouter banane à la scene
     Banane * banane = new Banane();
+    //qDebug() << " la scene : " << scene_jeu;
+
+
+    banane->setFlag(QGraphicsItem::ItemIsFocusable);
+    banane->setFocus();
 
     scene_jeu->addItem(banane);
-    qDebug() << " la scene : " << scene_jeu;
+    view_jeu->setScene(scene_jeu);
+
+
 
     if (this->model->get_haut() == true){
         banane->setPos(x()+150,y()+50);
@@ -120,4 +133,4 @@ void View::banane(){
         banane->setPos(x()+200,y()+100);
     }
 
-}
+} */
